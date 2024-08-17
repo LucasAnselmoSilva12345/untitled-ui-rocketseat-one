@@ -19,7 +19,11 @@ const config: Config = {
           '950': '#301853',
         },
       },
-    }
+      gridTemplateColumns: {
+        app: 'minmax(19rem, 20rem) 1fr',
+        profile: 'max-content 1fr max-content',
+      },
+    },
   },
   plugins: [],
 };
