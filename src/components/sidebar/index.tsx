@@ -13,6 +13,7 @@ import { Logomark } from './logomark';
 import { NavItem } from './nav-item';
 import { UsedSpaceWidget } from './used-space-widget';
 import { Profile } from './profile';
+import * as Input from '../input';
 
 export function Sidebar() {
   return (
@@ -22,14 +23,12 @@ export function Sidebar() {
         <h1 className="text-xl font-semibold text-zinc-900">Untitled UI</h1>
       </div>
 
-      <div className="w-full flex items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm">
-        <MagnifyingGlassIcon className="text-zinc-500" />
-        <input
-          type="text"
-          className="flex-1 border-0 bg-transparent p-0 text-zinc-900 placeholder-zinc-500"
-          placeholder="Search"
-        />
-      </div>
+      <Input.Root>
+        <Input.Prefix>
+          <MagnifyingGlassIcon className="text-zinc-500" />
+        </Input.Prefix>
+        <Input.Control placeholder="Search" />
+      </Input.Root>
 
       <nav className="space-y-0.5">
         <NavItem title="Home" icon={HomeIcon} />
